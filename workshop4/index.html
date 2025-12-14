@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <style>
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Registration Form</h2>
+
+<?php if ($success): ?>
+    <div class="success"><?= $success ?></div>
+<?php endif; ?>
+
+<form method="POST" action="index.php">
+
+    <!-- Name -->
+    <label>Name:</label><br>
+    <input type="text" name="name" value="">
+    <div class="error"><?= $errors['name'] ?? "" ?></div>
+
+    <!-- Email -->
+    <label>Email:</label><br>
+    <input type="email" name="email" value="">
+    <div class="error"><?= $errors['email'] ?? "" ?></div>
+
+    <!-- Password -->
+    <label>Password:</label><br>
+    <input type="password" name="password">
+    <div class="error"><?= $errors['password'] ?? "" ?></div>
+
+    <!-- Confirm Password -->
+    <label>Confirm Password:</label><br>
+    <input type="password" name="confirm_password">
+    <div class="error"><?= $errors['confirm_password'] ?? "" ?></div>
+
+    <br><br>
+    <button type="submit">Register</button><br>
+</form>
+
+</body>
+</html>

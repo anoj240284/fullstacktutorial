@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f2f2;
+}
+
+/* Background video */
+#video-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 2;
+}
+
+/* Navigation */
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00e5ff;
+}
+
+/* Sections */
+section {
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
+    width: 85%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* Inputs */
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* ---------- HAMBURGER + RESPONSIVE ---------- */
+
+/* Hide the menu button on big screens */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: darkslategray;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+
+    nav ul {
+        display: none;              /* Hide links by default */
+        flex-direction: column;
+        background: rgba(0,0,0,0.8);
+        padding: 15px 0;
+    }
+
+    nav ul.show {
+        display: flex;              /* Show when toggled */
+    }
+
+    nav ul li {
+        margin: 12px 0;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;             /* Show hamburger */
+        margin-right: 20px;
+    }
+}
